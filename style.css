@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Anton&family=Darker+Grotesque&display=swap');
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+}
+
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+}
+
+img {
+    width: 250px;
+    height: auto;
+}
+
+#bg{
+    width: 100%;
+    height: auto;
+    filter: brightness(50%);
+}
+
+/*css reset*/
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+#menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 30px;
+}
+
+#menu li a{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+    font-size: large;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home{
+   background-color: #59405C;
+}
+
+#syn{
+     background-color: #ED6663;
+}
+
+#char{
+     background-color: #B52B65;
+}
+
+#bts{
+     background-color: #3C2C3E;
+}
+
+#sound{
+     background-color: #B52B65;
+}
+
+
+/*home*/
+.home-inside{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.h-home {
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
+}
+.p-home{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+}
+/*syn*/
+.syn-inside{
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.h-syn {
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+.p-syn{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+}
+#slide {
+    width: 30%;
+}
+
+/*char*/
+.char-inside{
+
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+#charpic {
+    border-radius: 20%;
+}
+.h-char{
+
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+.char-name{
+
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+
+}
+.p-char{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+}
+#charpic {
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+/*sound*/
+.sound-inside{
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+#soundslide {
+    width: 200px;
+}
+.h-sound{
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+.p-sound{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
+}
+#slide {
+    width: 30%;
+}

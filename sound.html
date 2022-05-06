@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartstopper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/logo.png" sizes="96x96"/>
+
+</head>
+<body>
+    <header>
+        <a href="#"><img src="pics/logo.png" alt=""></a>
+        <ul id="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="syn.html">SYNOPSIS</a></li>
+            <li><a href="char.html">CHARACTERS</a></li>
+            <li><a href="bts.html">BTS</a></li>
+            <li><a href="sound.html">SOUNDTRACK</a></li>
+        </ul>
+    </header>
+    <img src="pics/soundbg.jpg" alt="" id = 'bg'>
+    <audio controls autoplay loop hidden>
+        <source src="audios/want.mp3" type="audio/mpeg">
+    </audio>
+
+
+    
+
+    <div class="sound-inside">
+        <div class="slide">
+            <img src="pics/sound1.jpg" alt="" id = 'soundslide'>
+        </div>
+        <h1 class = 'h-sound'>
+            SOUNDTRACK
+        </h1>
+        <p id = 'p-sound' class = 'p-sound'>
+            Why Am I Like This? - Orla Gartland
+        </p>
+    </div>
+
+    
+
+    <script>
+        let image = document.getElementById('soundslide');
+        let sounds = [
+            'Why Am I Like This? - Orla Gartland',
+            'Want Me - Baby Queen',
+            'Girls by Girl in Red',
+            'Clearest Blue - CHVRCHES',
+            'Paper Mache World - Matilda Mann'
+        ]
+        var images = [];
+        for (let i = 1; i <= 5; i++){
+            images.push('/pics/sound'+String(i)+'.jpg');
+        }
+        let i = 0;
+        setInterval(function(){
+            if(i == images.length){
+                i = 0;
+            }
+            soundslide.src = images[i];
+            document.getElementById("p-sound").innerHTML = sounds[i];
+            i++;
+        }, 3000);
+
+    </script>
+    
+</body>
+</html>

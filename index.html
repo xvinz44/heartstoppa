@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartstopper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/logo.png" sizes="96x96"/>
+
+</head>
+<body>
+    <header>
+        <a href=""><img src="pics/logo.png" alt=""></a>
+        <ul id="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="syn.html">SYNOPSIS</a></li>
+            <li><a href="char.html">CHARACTERS</a></li>
+            <li><a href="bts.html">BTS</a></li>
+            <li><a href="sound.html">SOUNDTRACK</a></li>
+        </ul>
+    </header>
+    <audio controls autoplay loop hidden>
+        <source src="audios/why.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <img src="pics/1.jpg" alt="" id = 'bg'>
+
+    <div class="home-inside">
+        <h1 class = 'h-home'>
+            HEARTSTOPPER
+        </h1>
+        <p class = 'p-home'>
+            A tv show directed by Euros Lyn and written and based on the novel of the same name by Alice Oseman
+        </p>
+        
+    </div>
+
+    
+
+    <script>
+        let image = document.getElementById('bg');
+        var images = [];
+        for (let i = 1; i <= 5; i++){
+            images.push('/pics/'+String(i)+'.jpg');
+        }
+        let i = 0;
+        setInterval(function(){
+            if(i == images.length){
+                i = 0;
+            }
+            bg.src = images[i];
+            i++;
+        }, 2000);
+
+    </script>
+    
+</body>
+</html>

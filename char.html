@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartstopper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="pics/logo.png" sizes="96x96"/>
+
+</head>
+<body>
+    <header>
+        <a href="#"><img src="pics/logo.png" alt=""></a>
+        <ul id="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="syn.html">SYNOPSIS</a></li>
+            <li><a href="char.html">CHARACTERS</a></li>
+            <li><a href="bts.html">BTS</a></li>
+            <li><a href="sound.html">SOUNDTRACK</a></li>
+        </ul>
+    </header>
+    <img src="pics/char.jpg" alt="" id = 'bg'>
+    <audio controls autoplay loop hidden>
+        <source src="audios/girls.mp3" type="audio/mpeg">
+    </audio>
+
+
+    
+
+    <div class="char-inside">
+        <div class="char">
+            <h1 class = 'h-char'>
+                CHARACTERS
+            </h1>
+        </div>
+        <div class="slide">
+            <img src="/pics/char1.jpg" alt="" id = 'charpic'>
+        </div>
+        <div class="char-det">
+            <h2 class = 'char-name' id = 'char-name'>
+                Charles “Charlie” Spring
+            </h2>
+            <p class = 'p-char' id = 'p-char'>
+                Charlie is a student at an all-boys grammar school, who was recently forced out of the closet under difficult circumstances. Since then, he has faced some bullying from the other kids at his school, but does have a sturdy support network in close friends Tao, Elle and Isaac.
+            </p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        let image = document.getElementById('charpic');
+        let chars = ['Charles “Charlie” Spring', 'Nicholas “Nick” Nelson', 'Tao Xu', 'Elle Argent', 'Tara Jones']
+        let descs = [
+            "Charlie is a student at an all-boys grammar school, who was recently forced out of the closet under difficult circumstances. Since then, he has faced some bullying from the other kids at his school, but does have a sturdy support network in close friends Tao, Elle and Isaac.",
+            "Nick Nelson is a year 11 student at the same grammar school as Charlie Spring. They meet for the first time at the start of the series, having not spoken previously due to their age gap and different social circles. However, Nick's reputation precedes him as the standout star of the school's rugby team, with a promising sporting future ahead of him. He quickly becomes fond of Charlie after getting to know him in form, but the strength of his feelings forces him to address some tough personal questions.",
+            "Tao is one of Charlie's best friends and is fiercely protective of him. He is highly skeptical when Nick starts spending time with Charlie and fears he could be taking advantage of his good nature. Generally, Tao is easily alarmed by anything that threatens to endanger the friendship group he loves so dearly, which also includes a newly absent Elle and Isaac.",
+            "Elle is another close friend to Charlie and Tao. She is transgender and was forced to move schools last year after suffering cruel treatment from students and teachers alike. This term, she is starting at a neighboring all-girls school, but worries whether she will be able to make friends.",
+            "Tara is a student at the all-girls school that Elle joins. She strikes up a rapport with Elle after meeting one morning in form."
+        ]
+        var images = [];
+        for (let i = 1; i <= 5; i++){
+            images.push('/pics/char'+String(i)+'.jpg');
+        }
+        let i = 0;
+        setInterval(function(){
+            if(i == images.length){
+                i = 0;
+            }
+            charpic.src = images[i];
+            document.getElementById("char-name").innerHTML = chars[i];
+            document.getElementById("p-char").innerHTML = descs[i];
+            i++;
+        }, 5000);
+
+    </script>
+    
+</body>
+</html>
